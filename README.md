@@ -4,6 +4,9 @@
 
 The sample application demonstrates microservices using REST API with Swagger UI allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure
 
+> This application took proximately 3 hours, many components can be added and enhanced for better endpoint documentation, unit test, and probably create relational tables, for sake of demonstration.
+Also javadoc is not implemented!
+
 ## Project Structure
 
 #### A typical top-level directory layout
