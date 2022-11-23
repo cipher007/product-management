@@ -6,6 +6,9 @@ import ae.adib.mstask.productmanagement.app.domain.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This adapter is to convert from product entity to product java Data transfer object
+ */
 public class ProductAdapter {
 
     private ProductDTO productDTO;

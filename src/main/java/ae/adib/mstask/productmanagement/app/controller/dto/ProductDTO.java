@@ -9,6 +9,10 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+/**
+ * Data transfer object representation of product entity
+ * it can be useful to aggregate data and is to reduce the number of system calls needed between the subsystems
+ */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.PROPERTY)
 public class ProductDTO {

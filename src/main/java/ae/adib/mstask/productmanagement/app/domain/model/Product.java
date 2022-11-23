@@ -3,6 +3,9 @@ package ae.adib.mstask.productmanagement.app.domain.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * the Product model where properties exist
+ */
 @Entity
 @Table(name = "product")
 public class Product {
@@ -24,12 +27,17 @@ public class Product {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-    //
+    /*
+     * set and assign datetime value upon update operation
+     */
     @PreUpdate
     public void onPreUpdate() {
         this.setUpdatedAt(LocalDateTime.now());
     }
 
+    /**
+     * set and assign datetime value to new created product
+     */
     @PrePersist
     public void onPrePersist() {
         LocalDateTime now = LocalDateTime.now();

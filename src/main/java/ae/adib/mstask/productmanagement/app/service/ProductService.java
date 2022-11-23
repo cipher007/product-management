@@ -12,6 +12,11 @@ import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This class is the service layer of the product 
+ * where it exposes many functionality to the client like save, update, delete, or list product
+ * it is the layer between the controller and repository for better isolation and separation of specialty
+ */
 @Service
 @Transactional
 public class ProductService {
@@ -26,6 +31,12 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    /**
+     * Save/insert and new product or update existing product with provided product identification
+     * @param productId
+     * @param product
+     * @return the newly inserted or update product
+     */
     public Product saveOrUpdate(Long productId, Product product) {
         Optional<Product> findById = productRepository.findById(productId);
 
@@ -44,17 +55,30 @@ public class ProductService {
         return productRepository.save(updatable);
     }
 
+    /**
+     * delete product record for provided product id
+     * @param productId
+     */
     public void delete(Long productId) {
         LOGGER.info("Deleting...");
         productRepository.deleteById(productId);
     }
 
+    /**
+     * Retrieves products functionality
+     * @return list of product exist in DB
+     */
     public List<Product> retrieveProducts() {
         List<Product> allProducts = productRepository.findAll();
 
         return allProducts;
     }
 
+    /**
+     * retrieve specific product using product id
+     * @param productId
+     * @return Product
+     */
     public Product retrieveProduct(Long productId) {
         Optional<Product> findById = productRepository.findById(productId);
 
