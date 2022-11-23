@@ -2,6 +2,7 @@ package ae.adib.mstask.productmanagement.app.controller.dto;
 
 import java.util.Set;
 
+import ae.adib.mstask.productmanagement.app.controller.adapter.ProductAdapter;
 import ae.adib.mstask.productmanagement.app.domain.model.Product;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.xml.bind.annotation.XmlAccessType;
@@ -11,7 +12,11 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * Data transfer object representation of product entity
- * it can be useful to aggregate data and is to reduce the number of system calls needed between the subsystems
+ * it can be useful to aggregate data and is to reduce the number of system
+ * calls needed between the subsystems
+ * 
+ * @see Product
+ * @see ProductAdapter
  */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.PROPERTY)
