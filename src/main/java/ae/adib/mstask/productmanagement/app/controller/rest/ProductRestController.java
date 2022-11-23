@@ -20,12 +20,21 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /**
  * REST controller layer
- * exposes our services to endpoint and client though defined urls and HTTP methods
+ * exposes our services to endpoint and client though defined urls and HTTP
+ * methods
  * POST method invoked and product saving (insert new product)
- * <B>/{productId} with PUT method: </B> operation where you update the product with given id
- * <B>/{productId} with DELETE method: </B> operation where you delete the product with given id
- * <B>/list with GET method: </B> operation where you display all products stored in DB
- * <B>/productId/list with GET method: </B> operation where you display specific products for given id
+ * <B>/{productId} with PUT method: </B> operation where you update the product
+ * with given id
+ * <B>/{productId} with DELETE method: </B> operation where you delete the
+ * product with given id
+ * <B>/list with GET method: </B> operation where you display all products
+ * stored in DB
+ * <B>/productId/list with GET method: </B> operation where you display specific
+ * products for given id
+ * 
+ * @see Product
+ * @see ProductRepository
+ * @see ProductService
  */
 @Controller
 public class ProductRestController {
@@ -33,7 +42,6 @@ public class ProductRestController {
     @Autowired
     private ProductService productService;
 
-    
     @RestController
     @RequestMapping(value = "/product")
     @Tag(name = "Product Manager API - Product", description = "Product operations.")
@@ -92,6 +100,7 @@ public class ProductRestController {
 
         /**
          * Retrieves all products to endpoint in JSON format
+         * 
          * @return products records
          */
         @Operation(summary = "Retrieve All Products", description = "Get all products listed")
@@ -108,6 +117,7 @@ public class ProductRestController {
 
         /**
          * Retrieves specific product for given id in JSON format
+         * 
          * @param productId
          * @return designated product
          */

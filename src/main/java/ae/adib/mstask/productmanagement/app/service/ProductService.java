@@ -13,9 +13,15 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * This class is the service layer of the product 
- * where it exposes many functionality to the client like save, update, delete, or list product
- * it is the layer between the controller and repository for better isolation and separation of specialty
+ * This class is the service layer of the product
+ * where it exposes many functionality to the client like save, update, delete,
+ * or list product
+ * it is the layer between the controller and repository for better isolation
+ * and separation of specialty
+ * 
+ * @see Product
+ * @see ProductRestController
+ * @see ProductRepository
  */
 @Service
 @Transactional
@@ -32,7 +38,9 @@ public class ProductService {
     }
 
     /**
-     * Save/insert and new product or update existing product with provided product identification
+     * Save/insert and new product or update existing product with provided product
+     * identification
+     * 
      * @param productId
      * @param product
      * @return the newly inserted or update product
@@ -57,6 +65,7 @@ public class ProductService {
 
     /**
      * delete product record for provided product id
+     * 
      * @param productId
      */
     public void delete(Long productId) {
@@ -66,6 +75,7 @@ public class ProductService {
 
     /**
      * Retrieves products functionality
+     * 
      * @return list of product exist in DB
      */
     public List<Product> retrieveProducts() {
@@ -76,6 +86,7 @@ public class ProductService {
 
     /**
      * retrieve specific product using product id
+     * 
      * @param productId
      * @return Product
      */

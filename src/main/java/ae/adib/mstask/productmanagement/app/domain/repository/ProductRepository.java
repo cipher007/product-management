@@ -1,6 +1,9 @@
 package ae.adib.mstask.productmanagement.app.domain.repository;
 
+import ae.adib.mstask.productmanagement.app.controller.rest.ProductRestController;
 import ae.adib.mstask.productmanagement.app.domain.model.Product;
+import ae.adib.mstask.productmanagement.app.service.ProductService;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -13,6 +16,9 @@ import java.util.Optional;
  * we can add custom queries bases on our needs as special implementation
  * 
  * This layer connects our application and service layer to the DB and data store 
+ * @see Product
+ * @see ProductRestController
+ * @see ProductService
  */
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
